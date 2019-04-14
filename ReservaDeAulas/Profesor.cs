@@ -15,11 +15,82 @@ namespace ReservaDeAulas
         private string nail;
         private int tipoDocumento_tipoDocumntoID;
 
-        public int Profesor_ID { get => profesor_ID; set => profesor_ID = value; }
-        public string NombreApellido { get => nombreApellido; set => nombreApellido = value; }
-        public string NroDocumento { get => nroDocumento; set => nroDocumento = value; }
-        public string NechaNacimiento { get => nechaNacimiento; set => nechaNacimiento = value; }
-        public string Nail { get => nail; set => nail = value; }
-        public int TipoDocumento_tipoDocumntoID { get => tipoDocumento_tipoDocumntoID; set => tipoDocumento_tipoDocumntoID = value; }
+        public int Profesor_ID
+        {
+            get
+            {
+                return profesor_ID;
+            }
+
+            set
+            {
+                profesor_ID = value;
+            }
+        }
+
+        public string NombreApellido
+        {
+            get
+            {
+                return nombreApellido;
+            }
+
+            set
+            {
+                nombreApellido = value;
+            }
+        }
+
+        public string NroDocumento
+        {
+            get
+            {
+                return nroDocumento;
+            }
+
+            set
+            {
+                nroDocumento = value;
+            }
+        }
+
+        public string NechaNacimiento
+        {
+            get
+            {
+                return nechaNacimiento;
+            }
+
+            set
+            {
+                nechaNacimiento = value;
+            }
+        }
+
+        public string Nail
+        {
+            get
+            {
+                return nail;
+            }
+
+            set
+            {
+                nail = value;
+            }
+        }
+
+        public int TipoDocumento_tipoDocumntoID
+        {
+            get
+            {
+                return tipoDocumento_tipoDocumntoID;
+            }
+
+            set
+            {
+                tipoDocumento_tipoDocumntoID = value;
+            }
+        }
     }
 }
