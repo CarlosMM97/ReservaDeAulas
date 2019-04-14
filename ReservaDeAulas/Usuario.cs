@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ReservaDeAulas
 {
-    public class Class1
+    class Usuario
     {
+        private int Usuario_ID;
+        public string User; 
+        private string Password;
     }
 }
