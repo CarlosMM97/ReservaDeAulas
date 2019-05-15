@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ReservaDeAulas
 {
-    class Materia
+   public class Materia
     {
         private int materia_ID;
         private string descripcion;

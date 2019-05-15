@@ -12,7 +12,7 @@ namespace ReservaDeAulas
         private string nombreApellido;
         private string nroDocumento;
         private string nechaNacimiento;
-        private string nail;
+        private string email;
         private int tipoDocumento_tipoDocumntoID;
 
         public int Profesor_ID
@@ -67,16 +67,16 @@ namespace ReservaDeAulas
             }
         }
 
-        public string Nail
+        public string Email
         {
             get
             {
-                return nail;
+                return email;
             }
 
             set
             {
-                nail = value;
+                email = value;
             }
         }
 

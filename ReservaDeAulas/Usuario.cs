@@ -6,10 +6,49 @@ using System.Threading.Tasks;
 
 namespace ReservaDeAulas
 {
-    class Usuario
+   public class Usuario
     {
-        private int Usuario_ID;
-        public string User; 
-        private string Password;
+        private int usuario_ID;
+        private string user;
+        private string password;
+
+        public int Usuario_ID
+        {
+            get
+            {
+                return usuario_ID;
+            }
+
+            set
+            {
+                usuario_ID = value;
+            }
+        }
+
+        public string User
+        {
+            get
+            {
+                return user;
+            }
+
+            set
+            {
+                user = value;
+            }
+        }
+
+        public string Password
+        {
+            get
+            {
+                return password;
+            }
+
+            set
+            {
+                password = value;
+            }
+        }
     }
 }
