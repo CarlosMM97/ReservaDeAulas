@@ -8,8 +8,8 @@ namespace ReservaDeAulas
 {
     class Reserva
     {
-        private int Reserva_ID;
-        public string FechaReserva;
+        //private int Reserva_ID;
+        //public string FechaReserva;
         
 
     }

@@ -38,19 +38,14 @@
             this.lblCantidadAlumnos = new System.Windows.Forms.Label();
             this.lblNroAula_ID = new System.Windows.Forms.Label();
             this.lblPiso = new System.Windows.Forms.Label();
-            this.cbxPiso = new System.Windows.Forms.ComboBox();
+            this.cboPiso = new System.Windows.Forms.ComboBox();
             this.gbxProyector = new System.Windows.Forms.GroupBox();
-            this.rdbPoseeProyector = new System.Windows.Forms.RadioButton();
             this.rdbNoPoseeProyector = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.rdbPoseeProyector = new System.Windows.Forms.RadioButton();
+            this.dgvAula = new System.Windows.Forms.DataGridView();
             this.cboTipoAula = new System.Windows.Forms.ComboBox();
-            this.NroAula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantidadAlumnos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoAula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Piso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Proyector = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxProyector.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAula)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -61,6 +56,7 @@
             this.btnCancelar.TabIndex = 31;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnModificar
             // 
@@ -70,6 +66,7 @@
             this.btnModificar.TabIndex = 30;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
@@ -79,6 +76,7 @@
             this.btnEliminar.TabIndex = 29;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
@@ -88,6 +86,7 @@
             this.btnAgregar.TabIndex = 28;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
             // 
             // txtCantidadAlumnos
             // 
@@ -98,7 +97,6 @@
             // 
             // txtNroAula_ID
             // 
-            this.txtNroAula_ID.Enabled = false;
             this.txtNroAula_ID.Location = new System.Drawing.Point(150, 31);
             this.txtNroAula_ID.Name = "txtNroAula_ID";
             this.txtNroAula_ID.Size = new System.Drawing.Size(36, 20);
@@ -140,13 +138,13 @@
             this.lblPiso.TabIndex = 21;
             this.lblPiso.Text = "Piso";
             // 
-            // cbxPiso
+            // cboPiso
             // 
-            this.cbxPiso.FormattingEnabled = true;
-            this.cbxPiso.Location = new System.Drawing.Point(150, 148);
-            this.cbxPiso.Name = "cbxPiso";
-            this.cbxPiso.Size = new System.Drawing.Size(121, 21);
-            this.cbxPiso.TabIndex = 27;
+            this.cboPiso.FormattingEnabled = true;
+            this.cboPiso.Location = new System.Drawing.Point(150, 148);
+            this.cboPiso.Name = "cboPiso";
+            this.cboPiso.Size = new System.Drawing.Size(121, 21);
+            this.cboPiso.TabIndex = 27;
             // 
             // gbxProyector
             // 
@@ -159,17 +157,6 @@
             this.gbxProyector.TabStop = false;
             this.gbxProyector.Text = "Proyector";
             // 
-            // rdbPoseeProyector
-            // 
-            this.rdbPoseeProyector.AutoSize = true;
-            this.rdbPoseeProyector.Location = new System.Drawing.Point(14, 19);
-            this.rdbPoseeProyector.Name = "rdbPoseeProyector";
-            this.rdbPoseeProyector.Size = new System.Drawing.Size(103, 17);
-            this.rdbPoseeProyector.TabIndex = 0;
-            this.rdbPoseeProyector.TabStop = true;
-            this.rdbPoseeProyector.Text = "Posee Proyector";
-            this.rdbPoseeProyector.UseVisualStyleBackColor = true;
-            // 
             // rdbNoPoseeProyector
             // 
             this.rdbNoPoseeProyector.AutoSize = true;
@@ -181,19 +168,25 @@
             this.rdbNoPoseeProyector.Text = "No posee proyector";
             this.rdbNoPoseeProyector.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // rdbPoseeProyector
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NroAula,
-            this.CantidadAlumnos,
-            this.TipoAula,
-            this.Piso,
-            this.Proyector});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 265);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(544, 247);
-            this.dataGridView1.TabIndex = 33;
+            this.rdbPoseeProyector.AutoSize = true;
+            this.rdbPoseeProyector.Location = new System.Drawing.Point(14, 19);
+            this.rdbPoseeProyector.Name = "rdbPoseeProyector";
+            this.rdbPoseeProyector.Size = new System.Drawing.Size(103, 17);
+            this.rdbPoseeProyector.TabIndex = 0;
+            this.rdbPoseeProyector.TabStop = true;
+            this.rdbPoseeProyector.Text = "Posee Proyector";
+            this.rdbPoseeProyector.UseVisualStyleBackColor = true;
+            // 
+            // dgvAula
+            // 
+            this.dgvAula.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAula.Location = new System.Drawing.Point(3, 265);
+            this.dgvAula.Name = "dgvAula";
+            this.dgvAula.Size = new System.Drawing.Size(544, 247);
+            this.dgvAula.TabIndex = 33;
+            this.dgvAula.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAula_CellClick);
             // 
             // cboTipoAula
             // 
@@ -203,44 +196,19 @@
             this.cboTipoAula.Size = new System.Drawing.Size(121, 21);
             this.cboTipoAula.TabIndex = 34;
             // 
-            // NroAula
-            // 
-            this.NroAula.HeaderText = "Nº de aula";
-            this.NroAula.Name = "NroAula";
-            // 
-            // CantidadAlumnos
-            // 
-            this.CantidadAlumnos.HeaderText = "Cantidad Alumnos";
-            this.CantidadAlumnos.Name = "CantidadAlumnos";
-            // 
-            // TipoAula
-            // 
-            this.TipoAula.HeaderText = "Tipo de aula";
-            this.TipoAula.Name = "TipoAula";
-            // 
-            // Piso
-            // 
-            this.Piso.HeaderText = "Piso";
-            this.Piso.Name = "Piso";
-            // 
-            // Proyector
-            // 
-            this.Proyector.HeaderText = "Proyector";
-            this.Proyector.Name = "Proyector";
-            // 
             // frmAula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 513);
             this.Controls.Add(this.cboTipoAula);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvAula);
             this.Controls.Add(this.gbxProyector);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.cbxPiso);
+            this.Controls.Add(this.cboPiso);
             this.Controls.Add(this.txtCantidadAlumnos);
             this.Controls.Add(this.txtNroAula_ID);
             this.Controls.Add(this.lblPiso);
@@ -249,9 +217,10 @@
             this.Controls.Add(this.lblNroAula_ID);
             this.Name = "frmAula";
             this.Text = "Mantenimiento de Aulas";
+            this.Load += new System.EventHandler(this.frmAula_Load);
             this.gbxProyector.ResumeLayout(false);
             this.gbxProyector.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAula)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,16 +238,11 @@
         private System.Windows.Forms.Label lblCantidadAlumnos;
         private System.Windows.Forms.Label lblNroAula_ID;
         private System.Windows.Forms.Label lblPiso;
-        private System.Windows.Forms.ComboBox cbxPiso;
+        private System.Windows.Forms.ComboBox cboPiso;
         private System.Windows.Forms.GroupBox gbxProyector;
         private System.Windows.Forms.RadioButton rdbNoPoseeProyector;
         private System.Windows.Forms.RadioButton rdbPoseeProyector;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NroAula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CantidadAlumnos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoAula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Piso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Proyector;
+        private System.Windows.Forms.DataGridView dgvAula;
         private System.Windows.Forms.ComboBox cboTipoAula;
     }
 }
