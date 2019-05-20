@@ -8,14 +8,21 @@ namespace ReservaDeAulas
 {
     public class Profesor
     {
-        private int profesor_ID;
+        public enum TipoDocumento
+        {
+            Cedula,
+            RUC,
+            Pasaporte
+        }
+        private Int16 profesor_ID;
         private string nombreApellido;
         private string nroDocumento;
-        private string nechaNacimiento;
+        private DateTime fechaNacimiento;
         private string email;
-        private int tipoDocumento_tipoDocumntoID;
+        private TipoDocumento venum_tipoDocumento;
+        public static List<Profesor> listaProfesor = new List<Profesor>();
 
-        public int Profesor_ID
+        public Int16 Profesor_ID
         {
             get
             {
@@ -54,16 +61,16 @@ namespace ReservaDeAulas
             }
         }
 
-        public string NechaNacimiento
+        public DateTime FechaNacimiento
         {
             get
             {
-                return nechaNacimiento;
+                return fechaNacimiento;
             }
 
             set
             {
-                nechaNacimiento = value;
+                fechaNacimiento = value;
             }
         }
 
@@ -80,17 +87,39 @@ namespace ReservaDeAulas
             }
         }
 
-        public int TipoDocumento_tipoDocumntoID
+        public TipoDocumento Venum_tipoDocumento
         {
             get
             {
-                return tipoDocumento_tipoDocumntoID;
+                return venum_tipoDocumento;
             }
 
             set
             {
-                tipoDocumento_tipoDocumntoID = value;
+                venum_tipoDocumento = value;
             }
+        }
+
+        public static void AgregarProfesor(Profesor p)
+        {
+
+            listaProfesor.Add(p);
+
+        }
+
+        public static void EliminarProfesor(Profesor p)
+        {
+            listaProfesor.Remove(p);
+        }
+
+        public static List<Profesor> ObtenerListaProfesores()
+        {
+            return listaProfesor;
+        }
+
+        public override string ToString()
+        {
+            return this.NombreApellido;
         }
     }
 }

@@ -39,18 +39,13 @@
             this.txtNombreApellido = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
-            this.cbxTipoDocumento = new System.Windows.Forms.ComboBox();
+            this.cboTipoDocumento = new System.Windows.Forms.ComboBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.dgvProfesores = new System.Windows.Forms.DataGridView();
-            this.Profesor_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NroDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaNac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProfesores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +64,7 @@
             this.lblNumeroDoc.Location = new System.Drawing.Point(31, 73);
             this.lblNumeroDoc.Name = "lblNumeroDoc";
             this.lblNumeroDoc.Size = new System.Drawing.Size(90, 13);
-            this.lblNumeroDoc.TabIndex = 1;
+            this.lblNumeroDoc.TabIndex = 2;
             this.lblNumeroDoc.Text = "Nº de documento";
             // 
             // lblNombreApellido
@@ -78,7 +73,7 @@
             this.lblNombreApellido.Location = new System.Drawing.Point(31, 167);
             this.lblNombreApellido.Name = "lblNombreApellido";
             this.lblNombreApellido.Size = new System.Drawing.Size(92, 13);
-            this.lblNombreApellido.TabIndex = 2;
+            this.lblNombreApellido.TabIndex = 6;
             this.lblNombreApellido.Text = "Nombre y Apellido";
             // 
             // lblFechaNac
@@ -87,7 +82,7 @@
             this.lblFechaNac.Location = new System.Drawing.Point(31, 206);
             this.lblFechaNac.Name = "lblFechaNac";
             this.lblFechaNac.Size = new System.Drawing.Size(106, 13);
-            this.lblFechaNac.TabIndex = 3;
+            this.lblFechaNac.TabIndex = 8;
             this.lblFechaNac.Text = "Fecha de nacimiento";
             // 
             // lblEmail
@@ -96,7 +91,7 @@
             this.lblEmail.Location = new System.Drawing.Point(31, 242);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(35, 13);
-            this.lblEmail.TabIndex = 4;
+            this.lblEmail.TabIndex = 10;
             this.lblEmail.Text = "E-mail";
             // 
             // lblTipoDoc
@@ -105,37 +100,36 @@
             this.lblTipoDoc.Location = new System.Drawing.Point(31, 117);
             this.lblTipoDoc.Name = "lblTipoDoc";
             this.lblTipoDoc.Size = new System.Drawing.Size(99, 13);
-            this.lblTipoDoc.TabIndex = 5;
+            this.lblTipoDoc.TabIndex = 4;
             this.lblTipoDoc.Text = "Tipo de documento";
             // 
             // txtProfesor_ID
             // 
-            this.txtProfesor_ID.Enabled = false;
             this.txtProfesor_ID.Location = new System.Drawing.Point(169, 31);
             this.txtProfesor_ID.Name = "txtProfesor_ID";
             this.txtProfesor_ID.Size = new System.Drawing.Size(36, 20);
-            this.txtProfesor_ID.TabIndex = 6;
+            this.txtProfesor_ID.TabIndex = 1;
             // 
             // txtNroDoc
             // 
             this.txtNroDoc.Location = new System.Drawing.Point(169, 73);
             this.txtNroDoc.Name = "txtNroDoc";
             this.txtNroDoc.Size = new System.Drawing.Size(121, 20);
-            this.txtNroDoc.TabIndex = 7;
+            this.txtNroDoc.TabIndex = 3;
             // 
             // txtNombreApellido
             // 
             this.txtNombreApellido.Location = new System.Drawing.Point(169, 167);
             this.txtNombreApellido.Name = "txtNombreApellido";
             this.txtNombreApellido.Size = new System.Drawing.Size(121, 20);
-            this.txtNombreApellido.TabIndex = 8;
+            this.txtNombreApellido.TabIndex = 7;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(169, 242);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(121, 20);
-            this.txtEmail.TabIndex = 9;
+            this.txtEmail.TabIndex = 11;
             // 
             // dtpFechaNac
             // 
@@ -143,15 +137,15 @@
             this.dtpFechaNac.Location = new System.Drawing.Point(169, 206);
             this.dtpFechaNac.Name = "dtpFechaNac";
             this.dtpFechaNac.Size = new System.Drawing.Size(121, 20);
-            this.dtpFechaNac.TabIndex = 10;
+            this.dtpFechaNac.TabIndex = 9;
             // 
-            // cbxTipoDocumento
+            // cboTipoDocumento
             // 
-            this.cbxTipoDocumento.FormattingEnabled = true;
-            this.cbxTipoDocumento.Location = new System.Drawing.Point(169, 117);
-            this.cbxTipoDocumento.Name = "cbxTipoDocumento";
-            this.cbxTipoDocumento.Size = new System.Drawing.Size(121, 21);
-            this.cbxTipoDocumento.TabIndex = 11;
+            this.cboTipoDocumento.FormattingEnabled = true;
+            this.cboTipoDocumento.Location = new System.Drawing.Point(169, 117);
+            this.cboTipoDocumento.Name = "cboTipoDocumento";
+            this.cboTipoDocumento.Size = new System.Drawing.Size(121, 21);
+            this.cboTipoDocumento.TabIndex = 5;
             // 
             // btnAgregar
             // 
@@ -161,90 +155,71 @@
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(255, 283);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 13;
+            this.btnEliminar.TabIndex = 14;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
             this.btnModificar.Location = new System.Drawing.Point(155, 283);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 14;
+            this.btnModificar.TabIndex = 13;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(361, 283);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 15;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // dgvProfesores
             // 
             this.dgvProfesores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProfesores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Profesor_ID,
-            this.NroDoc,
-            this.TipoDoc,
-            this.NombreApellido,
-            this.FechaNac,
-            this.Email});
             this.dgvProfesores.Location = new System.Drawing.Point(3, 312);
             this.dgvProfesores.Name = "dgvProfesores";
             this.dgvProfesores.Size = new System.Drawing.Size(643, 191);
             this.dgvProfesores.TabIndex = 16;
+            this.dgvProfesores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProfesores_CellClick);
             // 
-            // Profesor_ID
+            // btnSalir
             // 
-            this.Profesor_ID.HeaderText = "Cod Profesor";
-            this.Profesor_ID.Name = "Profesor_ID";
+            this.btnSalir.Location = new System.Drawing.Point(450, 283);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 15;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // NroDoc
+            // btnLimpiar
             // 
-            this.NroDoc.HeaderText = "Numero Documento";
-            this.NroDoc.Name = "NroDoc";
-            // 
-            // TipoDoc
-            // 
-            this.TipoDoc.HeaderText = "Tipo de documento";
-            this.TipoDoc.Name = "TipoDoc";
-            // 
-            // NombreApellido
-            // 
-            this.NombreApellido.HeaderText = "Nombre y Apellido";
-            this.NombreApellido.Name = "NombreApellido";
-            // 
-            // FechaNac
-            // 
-            this.FechaNac.HeaderText = "Fecha de Nacimiento";
-            this.FechaNac.Name = "FechaNac";
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "E-mail";
-            this.Email.Name = "Email";
+            this.btnLimpiar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLimpiar.Location = new System.Drawing.Point(348, 283);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.TabIndex = 17;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // frmProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 502);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(653, 517);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvProfesores);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.cbxTipoDocumento);
+            this.Controls.Add(this.cboTipoDocumento);
             this.Controls.Add(this.dtpFechaNac);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtNombreApellido);
@@ -258,6 +233,7 @@
             this.Controls.Add(this.lblProfesor_ID);
             this.Name = "frmProfesor";
             this.Text = "Mantenimiento de Profesores";
+            this.Load += new System.EventHandler(this.frmProfesor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProfesores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -277,18 +253,13 @@
         private System.Windows.Forms.TextBox txtNombreApellido;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.DateTimePicker dtpFechaNac;
-        private System.Windows.Forms.ComboBox cbxTipoDocumento;
+        private System.Windows.Forms.ComboBox cboTipoDocumento;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.DataGridView dgvProfesores;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Profesor_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NroDoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoDoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreApellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaNac;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReservaDeAulasInterfaz;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,24 @@ namespace InterfazReservaAulas
         public frmMenuPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void tsmAbmAula_Click(object sender, EventArgs e)
+        {
+            frmAula form = new frmAula();
+            form.Show();
+        }
+
+        private void tsmMateria_Click(object sender, EventArgs e)
+        {
+            frmMateria form = new frmMateria();
+            form.Show();
+        }
+
+        private void tsmAbmProfesores_Click(object sender, EventArgs e)
+        {
+            frmProfesor  form = new frmProfesor();
+            form.Show();
         }
     }
 }

@@ -40,7 +40,6 @@ namespace ReservaDeAulasInterfaz
             aula.Cant_Alumnos = (txtCantidadAlumnos.Text);
             aula.Venum_Tipo_aula = (Tipo_Aula)cboTipoAula.SelectedItem;
             aula.Venum_piso = (Piso)cboPiso.SelectedItem;
-            //profesor.Venum_tipoDocumento = (Profesor.TipoDocumento)cboTipoDocumento.SelectedItem;
             aula.Proyector = rdbPoseeProyector.Checked;
 
             return aula;
