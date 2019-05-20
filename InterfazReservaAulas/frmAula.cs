@@ -88,6 +88,7 @@ namespace ReservaDeAulasInterfaz
             int index = dgvAula.CurrentCell.RowIndex;
             Aula1.listaAulas[index] = ObtenerAulaFormulario();
             ActualizarListaAula();
+            LimpiarFormulario();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -105,7 +106,13 @@ namespace ReservaDeAulasInterfaz
 
         private void dgvAula_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            Aula1 aula = (Aula1)dgvAula.CurrentRow.DataBoundItem;
+            txtCantidadAlumnos.Text = Convert.ToString(aula.Cant_Alumnos);
+            txtNroAula_ID.Text = aula.Nro_Aula;
+            cboTipoAula.DataSource = Enum.GetValues(typeof(Tipo_Aula));
+            cboPiso.DataSource = Enum.GetValues(typeof(Piso));
 
+           
         }
     }
 }
